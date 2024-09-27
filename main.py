@@ -88,9 +88,9 @@ class FormPage(Screen):
 
         # Bouton retour
         back_button = Button(
-            text="<", 
-            size_hint=(0.1, 0.1), 
-            pos_hint={'center_x': 0.1}, 
+            text="Retour", 
+            size_hint=(0.5, 0.2), 
+            pos_hint={'center_x': 0.5}, 
             background_color=(0.5, 0.5, 0.5, 1)
         )
         back_button.bind(on_press=self.go_back)
@@ -202,7 +202,7 @@ class AboutPage(Screen):
         )
 
         # Bouton retour
-        back_button = Button(text="<", size_hint=(0.1, 0.1), pos_hint={'center_x': 0.1}, background_color=(0.5, 0.5, 0.5, 1))
+        back_button = Button(text="Retour", size_hint=(0.5, 0.2), pos_hint={'center_x': 0.5}, background_color=(0.5, 0.5, 0.5, 1))
         back_button.bind(on_press=self.go_back)
 
         layout.add_widget(about_label)
