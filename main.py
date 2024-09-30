@@ -142,10 +142,10 @@ class FormPage(Screen):
 
     def save_file(self, gpgga_data, gpgsa, gprmc):
         # Enregistrement dans un fichier .txt
-        with open("nmea_output.txt", "w") as f:
-            f.write(f"GPGGA: {gpgga_data}\n")
-            f.write(f"GPGSA: {gpgsa}\n")
-            f.write(f"GPRMC: {gprmc}\n")
+        with open("nmea_output.nmea", "w") as f:
+            f.write(f"{gpgga_data}\n")
+            f.write(f"{gpgsa}\n")
+            f.write(f"{gprmc}\n")
 
         # Confirmation de l'enregistrement
         self.show_confirmation()
@@ -156,8 +156,8 @@ class FormPage(Screen):
 
     def show_confirmation(self):
         # Afficher une popup de confirmation
-        content = BoxLayout(orientation='vertical')
-        content.add_widget(Label(text="Fichier enregistré avec succès !", color=(0, 0, 0, 1)))
+        content = BoxLayout(orientation='vertical', padding=10)
+        content.add_widget(Label(text="Fichier enregistré avec succès !\n Pour permettre de bien l'ouvrir dans nmeagen, on prend .nmea que .txt", color='white'))
         popup = Popup(title="Confirmation", content=content, size_hint=(0.6, 0.3))
         popup.open()
 
