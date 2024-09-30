@@ -9,6 +9,8 @@ from kivy.uix.image import Image
 from kivy.core.window import Window
 import sys
 
+import convertisseur
+
 # Modifier les couleurs du fond (Blanc)
 Window.clearcolor = (0.9, 0.9, 0.9, 1)  # Blanc en arrière-plan
 
@@ -114,8 +116,8 @@ class FormPage(Screen):
 
     def preview_results(self, instance):
         gpgga_data = self.gpgga_input.text
-        gpgsa = self.convert_gpgga_to_gpgsa(gpgga_data)
-        gprmc = self.convert_gpgga_to_gprmc(gpgga_data)
+        gpgsa = convertisseur.generer_gpgsa(gpgga_data)
+        gprmc = convertisseur.generer_gprmc(gpgga_data)
 
         # Prévisualisation des résultats avant enregistrement
         content = BoxLayout(orientation='vertical', padding=10, spacing=10)
