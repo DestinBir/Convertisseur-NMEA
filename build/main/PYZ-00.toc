@@ -233,6 +233,7 @@
    'C:\\Users\\Destin '
    'Biringanine\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\contextvars.py',
    'PYMODULE'),
+  ('convertisseur', 'D:\\Projets\\Convertisseur\\convertisseur.py', 'PYMODULE'),
   ('copy',
    'C:\\Users\\Destin '
    'Biringanine\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\copy.py',
