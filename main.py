@@ -159,12 +159,6 @@ class FormPage(Screen):
         popup = Popup(title="Confirmation", content=content, size_hint=(0.6, 0.3))
         popup.open()
 
-    def convert_gpgga_to_gpgsa(self, gpgga_data):
-        return f"$GPGSA,A,3,{gpgga_data}"
-
-    def convert_gpgga_to_gprmc(self, gpgga_data):
-        return f"$GPRMC,{gpgga_data}"
-
     def show_about(self, instance):
         self.manager.current = 'about_page'
 
